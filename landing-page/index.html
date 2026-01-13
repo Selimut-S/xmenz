@@ -101,6 +101,155 @@
           opacity: 0;
         }
       }
+
+      /* Button Border Animation */
+      .animated-button {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .animated-button span.border-line {
+        position: absolute;
+        display: block;
+      }
+
+      .animated-button span.border-line:nth-child(1) {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, currentColor);
+        animation: borderAnim1 1s linear infinite;
+      }
+
+      @keyframes borderAnim1 {
+        0% {
+          left: -100%;
+        }
+        50%,
+        100% {
+          left: 100%;
+        }
+      }
+
+      .animated-button span.border-line:nth-child(2) {
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, currentColor);
+        animation: borderAnim2 1s linear infinite;
+        animation-delay: 0.25s;
+      }
+
+      @keyframes borderAnim2 {
+        0% {
+          top: -100%;
+        }
+        50%,
+        100% {
+          top: 100%;
+        }
+      }
+
+      .animated-button span.border-line:nth-child(3) {
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg, transparent, currentColor);
+        animation: borderAnim3 1s linear infinite;
+        animation-delay: 0.5s;
+      }
+
+      @keyframes borderAnim3 {
+        0% {
+          right: -100%;
+        }
+        50%,
+        100% {
+          right: 100%;
+        }
+      }
+
+      .animated-button span.border-line:nth-child(4) {
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg, transparent, currentColor);
+        animation: borderAnim4 1s linear infinite;
+        animation-delay: 0.75s;
+      }
+
+      @keyframes borderAnim4 {
+        0% {
+          bottom: -100%;
+        }
+        50%,
+        100% {
+          bottom: 100%;
+        }
+      }
+
+      /* Mask Hover Animation */
+      .mask-button {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .mask-button .mask-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        pointer-events: none;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      .mask-button .mask-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        -webkit-mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+        mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+        -webkit-mask-size: 7100% 100%;
+        mask-size: 7100% 100%;
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+        animation: maskReverse 0.7s steps(70) forwards;
+      }
+
+      .mask-button:hover .mask-bg {
+        animation: maskForward 0.7s steps(70) forwards;
+      }
+
+      @keyframes maskForward {
+        from {
+          -webkit-mask-position: 0 0;
+          mask-position: 0 0;
+        }
+        to {
+          -webkit-mask-position: 100% 0;
+          mask-position: 100% 0;
+        }
+      }
+
+      @keyframes maskReverse {
+        from {
+          -webkit-mask-position: 100% 0;
+          mask-position: 100% 0;
+        }
+        to {
+          -webkit-mask-position: 0 0;
+          mask-position: 0 0;
+        }
+      }
     </style>
   </head>
 
@@ -207,60 +356,85 @@
         <a
           href="https://youtube.com"
           target="_blank"
-          class="w-full py-3 rounded-lg bg-red-600 hover:bg-red-700 duration-200 shadow-md flex items-center justify-center gap-2"
+          class="animated-button mask-button w-full py-3 rounded-lg bg-red-600 hover:bg-red-700 duration-200 shadow-md flex items-center justify-center gap-2"
         >
+          <span class="border-line"></span>
+          <span class="border-line"></span>
+          <span class="border-line"></span>
+          <span class="border-line"></span>
+          <span class="mask-bg"></span>
           <img
             src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
-            class="w-6"
+            class="w-6 relative z-10"
           />
-          YouTube
+          <span class="relative z-10">YouTube</span>
         </a>
 
         <a
           href="https://tiktok.com"
           target="_blank"
-          class="w-full py-3 rounded-lg bg-white text-black hover:bg-gray-300 duration-200 shadow-md flex items-center justify-center gap-2"
+          class="animated-button mask-button w-full py-3 rounded-lg bg-white text-white hover:text-black hover:bg-gray-300 duration-200 shadow-md flex items-center justify-center gap-2"
         >
+          <span class="border-line"></span>
+          <span class="border-line"></span>
+          <span class="border-line"></span>
+          <span class="border-line"></span>
+          <span class="mask-bg"></span>
           <img
             src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"
-            class="w-6"
+            class="w-6 relative z-10"
           />
-          TikTok
+          <span class="relative z-10">TikTok</span>
         </a>
 
         <a
           href="https://saweria.co"
           target="_blank"
-          class="w-full py-3 rounded-lg bg-yellow-500 hover:bg-yellow-600 duration-200 shadow-md flex items-center justify-center gap-2"
+          class="animated-button mask-button w-full py-3 rounded-lg bg-yellow-500 hover:bg-yellow-600 duration-200 shadow-md flex items-center justify-center gap-2"
         >
+          <span class="border-line"></span>
+          <span class="border-line"></span>
+          <span class="border-line"></span>
+          <span class="border-line"></span>
+          <span class="mask-bg"></span>
           <img
             src="https://cdn-icons-png.flaticon.com/128/1177/1177568.png"
-            class="w-6"
+            class="w-6 relative z-10"
           />
-          Saweria
+          <span class="relative z-10">Saweria</span>
         </a>
 
         <!-- IG & FB Popup -->
         <button
           onclick="showInfoPopup()"
-          class="w-full py-3 rounded-lg bg-pink-600 hover:bg-pink-700 duration-200 shadow-md flex items-center justify-center gap-2"
+          class="animated-button mask-button w-full py-3 rounded-lg bg-pink-600 hover:bg-pink-700 duration-200 shadow-md flex items-center justify-center gap-2"
         >
+          <span class="border-line"></span>
+          <span class="border-line"></span>
+          <span class="border-line"></span>
+          <span class="border-line"></span>
+          <span class="mask-bg"></span>
           <img
             src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
-            class="w-6"
+            class="w-6 relative z-10"
           />
-          Instagram
+          <span class="relative z-10">Instagram</span>
         </button>
 
         <button
           onclick="showInfoPopup()"
-          class="w-full py-3 rounded-lg bg-blue-600 hover:bg-blue-700 duration-200 shadow-md flex items-center justify-center gap-2"
+          class="animated-button mask-button w-full py-3 rounded-lg bg-blue-600 hover:bg-blue-700 duration-200 shadow-md flex items-center justify-center gap-2"
         >
+          <span class="border-line"></span>
+          <span class="border-line"></span>
+          <span class="border-line"></span>
+          <span class="border-line"></span>
+          <span class="mask-bg"></span>
           <img
             src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
-            class="w-6"
+            class="w-6 relative z-10"
           />
-          Facebook
+          <span class="relative z-10">Facebook</span>
         </button>
       </div>
     </section>
