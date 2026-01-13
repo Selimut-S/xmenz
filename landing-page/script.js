@@ -1,6 +1,9 @@
 // POPUP
-function showInfoPopup() {
-  document.getElementById("popup").classList.remove("hidden");
+function showInfoPopup(e) {
+  e.preventDefault();
+  setTimeout(() => {
+    document.getElementById("popup").classList.remove("hidden");
+  }, 800);
 }
 
 function closePopup() {
@@ -15,9 +18,18 @@ document.addEventListener("click", function (e) {
   ripple.style.top = `${e.clientY}px`;
   document.body.appendChild(ripple);
 
+  // Delay navigation untuk link eksternal
+  const link = e.target.closest("a");
+  if (link && link.href && link.target === "_blank") {
+    e.preventDefault();
+    setTimeout(() => {
+      window.open(link.href, "_blank");
+    }, 800);
+  }
+
   setTimeout(() => {
     ripple.remove();
-  }, 600);
+  }, 800);
 });
 
 // PARALLAX LOGO
