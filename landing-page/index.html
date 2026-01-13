@@ -111,6 +111,12 @@
       .animated-button span.border-line {
         position: absolute;
         display: block;
+        opacity: 1;
+        transition: opacity 0.25s ease;
+      }
+
+      .animated-button:hover span.border-line {
+        opacity: 0;
       }
 
       .animated-button span.border-line:nth-child(1) {
@@ -120,6 +126,7 @@
         height: 2px;
         background: linear-gradient(90deg, transparent, currentColor);
         animation: borderAnim1 1s linear infinite;
+        z-index: 20;
       }
 
       @keyframes borderAnim1 {
@@ -140,6 +147,7 @@
         background: linear-gradient(180deg, transparent, currentColor);
         animation: borderAnim2 1s linear infinite;
         animation-delay: 0.25s;
+        z-index: 20;
       }
 
       @keyframes borderAnim2 {
@@ -160,6 +168,7 @@
         background: linear-gradient(270deg, transparent, currentColor);
         animation: borderAnim3 1s linear infinite;
         animation-delay: 0.5s;
+        z-index: 20;
       }
 
       @keyframes borderAnim3 {
@@ -180,6 +189,7 @@
         background: linear-gradient(360deg, transparent, currentColor);
         animation: borderAnim4 1s linear infinite;
         animation-delay: 0.75s;
+        z-index: 20;
       }
 
       @keyframes borderAnim4 {
@@ -356,7 +366,7 @@
         <a
           href="https://youtube.com"
           target="_blank"
-          class="animated-button mask-button w-full py-3 rounded-lg bg-red-600 hover:bg-red-700 duration-200 shadow-md flex items-center justify-center gap-2"
+          class="animated-button mask-button w-full py-3 rounded-lg bg-black hover:bg-red-600 hover:bg-red-700 duration-200 shadow-md flex items-center justify-center gap-2"
         >
           <span class="border-line"></span>
           <span class="border-line"></span>
@@ -373,7 +383,7 @@
         <a
           href="https://tiktok.com"
           target="_blank"
-          class="animated-button mask-button w-full py-3 rounded-lg bg-white text-white hover:text-black hover:bg-gray-300 duration-200 shadow-md flex items-center justify-center gap-2"
+          class="animated-button mask-button w-full py-3 rounded-lg bg-black hover:bg-white text-white hover:text-black hover:bg-gray-300 duration-200 shadow-md flex items-center justify-center gap-2"
         >
           <span class="border-line"></span>
           <span class="border-line"></span>
@@ -390,7 +400,7 @@
         <a
           href="https://saweria.co"
           target="_blank"
-          class="animated-button mask-button w-full py-3 rounded-lg bg-yellow-500 hover:bg-yellow-600 duration-200 shadow-md flex items-center justify-center gap-2"
+          class="animated-button mask-button w-full py-3 rounded-lg bg-black hover:bg-yellow-500 hover:bg-yellow-600 duration-200 shadow-md flex items-center justify-center gap-2"
         >
           <span class="border-line"></span>
           <span class="border-line"></span>
@@ -407,7 +417,7 @@
         <!-- IG & FB Popup -->
         <button
           onclick="showInfoPopup()"
-          class="animated-button mask-button w-full py-3 rounded-lg bg-pink-600 hover:bg-pink-700 duration-200 shadow-md flex items-center justify-center gap-2"
+          class="animated-button mask-button w-full py-3 rounded-lg bg-black hover:bg-pink-600 hover:bg-pink-700 duration-200 shadow-md flex items-center justify-center gap-2"
         >
           <span class="border-line"></span>
           <span class="border-line"></span>
@@ -423,7 +433,7 @@
 
         <button
           onclick="showInfoPopup()"
-          class="animated-button mask-button w-full py-3 rounded-lg bg-blue-600 hover:bg-blue-700 duration-200 shadow-md flex items-center justify-center gap-2"
+          class="animated-button mask-button w-full py-3 rounded-lg bg-black hover:bg-blue-600 hover:bg-blue-700 duration-200 shadow-md flex items-center justify-center gap-2"
         >
           <span class="border-line"></span>
           <span class="border-line"></span>
