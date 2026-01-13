@@ -1,3 +1,5 @@
+<img src="assets/icon2.png" alt="Logo XMenz" width="240" style="border-radius: 12px; display: block; margin: 0 auto;" />
+
 # XMenz Landing Page
 
 Landing page sederhana untuk XMenz, streamer gaming. Halaman ini menampilkan hero dengan avatar, tombol ke platform utama (Saweria, YouTube, TikTok), efek animasi ringan, serta popup info untuk kanal yang belum aktif.
@@ -31,3 +33,5 @@ Landing page sederhana untuk XMenz, streamer gaming. Halaman ini menampilkan her
 Dukung creator melalui Saweria: https://saweria.co/XMenz
 
 Jika ada pertanyaan atau ingin kolaborasi, sertakan pesan lewat Saweria saat mengirim dukungan; itu kanal kontak yang dipantau.
+
+<img  src="assets/bg.jpg"  alt="Logo XMenz"  style="width: 100%; height: 27vh; object-fit: cover; object-position: center; border-radius: 12px;"/>
