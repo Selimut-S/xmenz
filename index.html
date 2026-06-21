@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
@@ -90,7 +90,8 @@
         pointer-events: none;
         transform: translate(-50%, -50%);
         animation: rippleEffect 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 0 20px rgba(255, 30, 30, 0.8),
+        box-shadow:
+          0 0 20px rgba(255, 30, 30, 0.8),
           0 0 40px rgba(30, 144, 255, 0.6);
       }
 
@@ -98,17 +99,21 @@
         0% {
           transform: scale(1);
           opacity: 1;
-          box-shadow: 0 0 20px rgba(255, 30, 30, 0.8),
+          box-shadow:
+            0 0 20px rgba(255, 30, 30, 0.8),
             0 0 40px rgba(30, 144, 255, 0.6);
         }
         50% {
-          box-shadow: 0 0 40px rgba(3, 233, 244, 0.8),
+          box-shadow:
+            0 0 40px rgba(3, 233, 244, 0.8),
             0 0 80px rgba(30, 144, 255, 0.4);
         }
         to {
           transform: scale(20);
           opacity: 0;
-          box-shadow: 0 0 0 rgba(255, 30, 30, 0), 0 0 0 rgba(30, 144, 255, 0);
+          box-shadow:
+            0 0 0 rgba(255, 30, 30, 0),
+            0 0 0 rgba(30, 144, 255, 0);
         }
       }
 
@@ -319,8 +324,10 @@
         alt="XMenz Logo"
         class="w-44 rounded-full md:w-52"
         style="
-          animation: mascotFloat 4s infinite ease-in-out,
-            glowPulse 3.5s infinite ease-in-out, fadeInLogo 1.2s ease forwards;
+          animation:
+            mascotFloat 4s infinite ease-in-out,
+            glowPulse 3.5s infinite ease-in-out,
+            fadeInLogo 1.2s ease forwards;
           opacity: 1;
         "
       />
@@ -347,7 +354,8 @@
           -webkit-background-clip: text;
           background-clip: text;
           color: transparent;
-          animation: gradientAnim 5s ease infinite,
+          animation:
+            gradientAnim 5s ease infinite,
             fadeInTitle 1.2s ease forwards;
           opacity: 1;
         "
@@ -382,14 +390,26 @@
         style="animation-delay: 0.4s"
       >
         Streamer gaming dengan gaya elegan, berkarisma, dan humoris. Ayo dukung
-        perjalanan XMenz!
+        perjalanan XMenz dengan penuh tawa, canda, dan kegembiraan Huahahahahaha
+        :)
       </p>
 
       <!-- Media vertical list -->
       <div
-        class="mt-10 flex flex-col gap-4 items-center w-full max-w-xs fade-in"
+        class="mt-10 flex flex-col gap-4 items-center w-full md:max-w-xs fade-in"
         style="animation-delay: 0.6s"
       >
+        <p
+          class="text-gray-300 max-w-md my-4 fade-in text-xs sm:text-sm text"
+          style="animation-delay: 0.4s"
+        >
+          Kirim media share video, foto, dan pesan ke XMenz melalui
+          <a
+            href="https://saweria.co/XMenz"
+            class="text-yellow-400 font-semibold"
+            >Saweria</a
+          >
+        </p>
         <a
           href="https://saweria.co/XMenz"
           target="_blank"
@@ -407,6 +427,14 @@
           />
           <span class="relative z-10 font-bold">Saweria</span>
         </a>
+
+        <p
+          class="text-gray-300 max-w-md my-4 fade-in text-xs sm:text-sm text"
+          style="animation-delay: 0.4s"
+        >
+          Follow XMenz di media sosial untuk update terbaru, konten eksklusif,
+          dan keseruan lainnya✌️😁
+        </p>
 
         <a
           href="https://www.youtube.com/@XRMenz"
@@ -463,8 +491,8 @@
         </button>
 
         <a
-        href="https://www.facebook.com/priscilla.286364/"
-        target="_blank"
+          href="https://www.facebook.com/profile.php?id=61590087632041&sk=reels_tab"
+          target="_blank"
           class="animated-button mask-button w-full py-3 rounded-lg bg-black hover:bg-blue-600 hover:bg-blue-700 duration-200 shadow-md flex items-center justify-center gap-2"
           style="--border-color: #1877f2"
         >
@@ -478,7 +506,7 @@
             class="w-6 relative z-10"
           />
           <span class="relative z-10">Facebook</span>
-      </a>
+        </a>
 
         <!-- <button
           onclick="showInfoPopup(event)"
@@ -535,49 +563,19 @@
           Informasi
         </h2>
         <p class="text-gray-500 text-sm sm:text-base text-center">
-          Mohon maaf, saat ini XMenz baru aktif di:
+          Mohon maaf, saat ini XMenz belum mempunyai instagram.
         </p>
 
         <div class="flex flex-col gap-3 my-4">
-          <a
-            href="https://saweria.co/XMenz"
-            target="_blank"
-            class="mask-button py-2 px-4 rounded-lg bg-black hover:bg-yellow-500 hover:bg-yellow-600 text-black text-center text-sm text-yellow-600 hover:text-white sm:text-base transition duration-200 relative overflow-hidden"
-          >
-            <span class="mask-bg"></span>
-            <span class="relative z-10 font-bold">Saweria</span>
-          </a>
-          <a
-            href="https://www.youtube.com/@XRMenz"
-            target="_blank"
-            class="mask-button py-2 px-4 rounded-lg bg-black hover:bg-red-600 hover:bg-red-700 text-center text-sm text-red-700 hover:text-white sm:text-base transition duration-200 relative overflow-hidden"
-          >
-            <span class="mask-bg"></span>
-            <span class="relative z-10">YouTube</span>
-          </a>
-          <a
-            href="https://www.tiktok.com/@xmenz17?_r=1&_t=ZS-932NOQFrd3Z"
-            target="_blank"
-            class="mask-button py-2 px-4 rounded-lg bg-black hover:bg-white text-black hover:bg-gray-300 text-center text-sm text-gray-300 hover:text-black sm:text-base transition duration-200 relative overflow-hidden"
-          >
-            <span class="mask-bg"></span>
-            <span class="relative z-10">TikTok</span>
-          </a>
-        </div>
 
         <p class="text-gray-500 text-sm sm:text-base text-center">
           Ke depannya, XMenz akan segera hadir dan aktif di platform media
           sosial lainnya.
         </p>
         <p
-          class="text-gray-500 mb-4 text-sm sm:text-base text-center italic text-light"
+          class="text-gray-500 mb-4 text-sm sm:text-base text-center text-light"
         >
-          Donasi sekarang melalui
-          <a
-            href="https://saweria.co/XMenz"
-            class="text-yellow-400 font-semibold"
-            >Saweria</a
-          >
+          😣😣😣
         </p>
 
         <button
